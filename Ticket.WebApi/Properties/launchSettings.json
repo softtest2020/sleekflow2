@@ -1,0 +1,35 @@
+{
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Ticket.WebApi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/ticket/swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "Event__Settings__EventManagementUrl": "http://localhost:5000",
+        "APP_PREFIX": "/api/ticket",
+        "Authentication__Options__DisableAuthFlag": "true",
+        "ConnectionStrings__Ticket": "Server=(localdb)\\MSSQLLocalDB;Database=Test2.ToDoTicket.WebApi",
+        "XBase__Options__PerformMigrationFlag": "false"
+      },
+      "applicationUrl": "https://localhost:6200"
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:21210",
+      "sslPort": 44330
+    }
+  }
+}

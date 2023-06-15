@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "c4633a88-67be-4622-b7d6-57f225bc685f",
+		"name": "ToDoTicket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20024726",
+		"_collection_link": "https://orange-sunset-845414.postman.co/workspace/Latest-Api-test~e054defe-e83e-43ed-85cb-53d54f2bded0/collection/20024726-c4633a88-67be-4622-b7d6-57f225bc685f?action=share&creator=20024726&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ticketSummary",
+							"value": "ToDoTask1",
+							"type": "text"
+						},
+						{
+							"key": "ticketDescription",
+							"value": "ToDoTask1",
+							"type": "text"
+						},
+						{
+							"key": "ticketPriority",
+							"value": "High",
+							"type": "text"
+						},
+						{
+							"key": "ticketStatus",
+							"value": "In Progress",
+							"type": "text"
+						},
+						{
+							"key": "userId",
+							"value": "XUser-1",
+							"type": "text"
+						},
+						{
+							"key": "dueDate",
+							"value": "2018-03-29T13:34:00.000",
+							"type": "text"
+						},
+						{
+							"key": "attachments",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:6200/api/ticket/api/Ticket/create",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6200",
+					"path": [
+						"api",
+						"ticket",
+						"api",
+						"Ticket",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ticketId\": \"XT-0001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6200/api/ticket/api/Ticket/filter",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6200",
+					"path": [
+						"api",
+						"ticket",
+						"api",
+						"Ticket",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ticketId",
+							"value": "XT-0001",
+							"type": "text"
+						},
+						{
+							"key": "ticketSummary",
+							"value": "Update_XT-0001",
+							"type": "text"
+						},
+						{
+							"key": "ticketDescription",
+							"value": "Update_XT-0001",
+							"type": "text"
+						},
+						{
+							"key": "ticketPriority",
+							"value": "High",
+							"type": "text"
+						},
+						{
+							"key": "ticketStatus",
+							"value": "Done",
+							"type": "text"
+						},
+						{
+							"key": "dueDate",
+							"value": "2020-03-29T13:34:00.000",
+							"type": "text"
+						},
+						{
+							"key": "userId",
+							"value": "XUser-2",
+							"type": "text"
+						},
+						{
+							"key": "attachments",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:6200/api/ticket/api/Ticket/update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6200",
+					"path": [
+						"api",
+						"ticket",
+						"api",
+						"Ticket",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ticketId\": \"XT-0001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6200/api/ticket/api/Ticket/details",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6200",
+					"path": [
+						"api",
+						"ticket",
+						"api",
+						"Ticket",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ticketId\": \"XT-0001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:6200/api/ticket/api/Ticket/delete",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6200",
+					"path": [
+						"api",
+						"ticket",
+						"api",
+						"Ticket",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

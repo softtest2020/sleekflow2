@@ -1,0 +1,69 @@
+{
+  "XBase": {
+    "HttpClient": {
+      "ClientCredentialsTokenOptions": {
+        "IdentityProviderUrl": "",
+        "ClientId": "",
+        "ClientSecret": "",
+        "Scope": "",
+        "TargetUris": [
+          "",
+          ""
+        ]
+      }
+    },
+    "AuthManager": {
+      "SelectedProvider": "Api",
+      "Providers": {
+        "Api": {
+          "Type": "Xtremax.AuthorizationManagementClient.AuthManagerApiClient, Xtremax.AuthorizationManagementClient",
+          "Settings": {
+            "BaseUrl": "",
+            "FilterUserPath": "",
+            "FilterUserRolePath": "",
+            "DeleteUserRolePath": "",
+            "AssignUserToRolePath": "",
+            "GetRolePath": "",
+            "FilterRolePath": "",
+            "CreateRolePath": "",
+            "UpdateRolePath": "",
+            "DeleteRolePath": "",
+            "GetPermissionPath": "",
+            "GetAssignedRolesPath": "",
+            "GetScopePath": "",
+            "GetUserByPermissionPath": "",
+            "GetUserRoleOnlyPath": ""
+          }
+        },
+        "Mock": {
+          "Type": "Xtremax.AuthorizationManagementClient.AuthManagerMockClient, Xtremax.AuthorizationManagementClient",
+          "Settings": {}
+        }
+      },
+      "RetryOptions": {
+        "MaxRetry": 5,
+        "DelayRetryInSecond": 5,
+        "IncrementalPoint": 5
+      }
+    }
+  },
+  "Authentication": {
+    "Options": {
+      "DisableAuthFlag": true
+    },
+    "JwtBearer": {
+      "Authority": "",
+      "Audience": ""
+    },
+    "Introspection": {
+      "Authority": "",
+      //API resources
+      "ClientId": "",
+      //API resources secret
+      "ClientSecret": "",
+      "DiscoveryPolicy": {
+        "RequireHttps": false
+      }
+    }
+  }
+}
